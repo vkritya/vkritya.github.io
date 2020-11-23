@@ -5,7 +5,7 @@ You know the rules and so do I
 A full commitment's what I'm thinking of  
 You wouldn't get this from any other guy  
   
-! [] (rick.gif)
+![](rick.gif)
   
 I just wanna tell you how I'm feeling  
 Gotta make you understand  
