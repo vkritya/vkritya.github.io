@@ -1,1 +1,60 @@
+/* "GNU GPL licence version 3 with font exception" => beágyazható a GNU licenc hozzácsatolása nélkül */
+@font-face {
+  font-family: 'osifont';
+  src: url(osifont.woff);
+}
 
+@keyframes mousehover {
+  0% {background-color: #7b68ee; color: white;}
+  100% {background-color: #e9e6ff; color: #4d4d4d;}
+}
+
+.magyar-szavak {
+  animation-direction: reverse;
+}
+.magyar-szavak:hover {
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-name: mousehover;
+  animation-duration: 300ms;
+}
+
+body {
+  background-color: darkslateblue;
+  margin: 0px;
+  font-size: 16pt;
+  font-family: osifont;
+}
+
+/* magyar_szavak => header */
+div.magyar_szavak {
+  background-color: mediumslateblue;
+  width: 100%;
+  position: fixed;
+}
+
+table.magyar_szavak {
+  user-select: none;
+  border-spacing: 0px;
+  width: 100%;
+  align-self: center;
+  color: white;
+  border: 0px;
+  border-bottom: 2px white solid;
+}
+
+tr.magyar_szavak {
+
+}
+
+td.magyar_szavak {
+  padding-top: 6pt;
+  border: 1px white solid;
+  border-start-end-radius: 5px;
+  width: 25%;
+  text-align: center;
+}
+
+/* end of header */
