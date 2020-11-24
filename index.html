@@ -4,20 +4,11 @@
   <meta charset="utf-8" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="injectCommonElements.js"></script>
 </head>
-<body>
+<body onload="injectHeader(); injectFooter()">
   <!-- header -->
-  <header class="fejlec arnyek">
-    <p class="fejlec">*Fejléc hangok*</p>
-    <table class="fejlec">
-      <tr class="fejlec">
-        <td class="fejlec animacio">a</td>
-        <td class="fejlec animacio">b</td>
-        <td class="fejlec animacio">c</td>
-        <td class="fejlec animacio">d</td>
-      </tr>
-    </table>
-  </header>
+  <div id="fejlec"></div>
   <!-- end of header -->
   <main class="tartalom arnyek" style="height: 800px">
     <h1>Content</h1>
@@ -25,8 +16,6 @@
   </main>
 
   <!-- footer -->
-  <footer class="lablec">
-    <p class="lablec">Footer placeholder</p>
-  </footer>
+  <div id="lablec"></div>
   <!-- end of footer -->
 </body>
