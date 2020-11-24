@@ -1,68 +1,115 @@
 /* "GNU GPL licence version 3 with font exception" => beágyazható a GNU licenc hozzácsatolása nélkül */
 @font-face {
-  font-family: 'osifont';
+  font-family: "osifont";
   src: url(osifont.woff);
 }
 
 @keyframes mousehover {
-  0% {background-color: #7b68ee; color: white;}
-  100% {background-color: #e9e6ff; color: #4d4d4d;}
-}
-
-.magyar-szavak {
-  animation-direction: reverse;
-}
-.magyar-szavak:hover {
-  animation-direction: normal;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-name: mousehover;
-  animation-duration: 300ms;
+  0% {
+    background-color: #e9e6ff;
+    color: slateblue;
+  }
+  100% {
+    background-color: slateblue;
+    color: white;
+  }
 }
 
 body {
+  display: grid;
   background-color: darkslateblue;
   margin: 0px;
   font-size: 16pt;
   font-family: osifont;
   color: white;
+  grid-template-areas: "fejlec" "tartalom" "lablec";
+  grid-template-rows: max-content 1fr max-content;
+  min-height: 100vh;
 }
-
 p {
-  padding: 6pt;
+  padding-top: 6pt;
+  padding-left: 9pt;
+  padding-bottom: 0pt;
+  margin-block-start: 0px;
+}
+h1 {
+  padding-top: 6pt;
+  padding-left: 3pt;
   padding-bottom: 0pt;
   margin-block-start: 0px;
 }
 
-/* magyar_szavak => header */
-div.magyar_szavak {
-  width: 100%;
-  background-color: mediumslateblue;
-  border-bottom: 2px white solid;
+/* general */
+.animacio:hover {
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-name: mousehover;
+  animation-duration: 250ms;
 }
 
-table.magyar_szavak {
+.arnyek {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+/* end of general */
+
+/* header */
+header.fejlec {
+  grid-area: fejlec;
   position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  color: slateblue;
+}
+table.fejlec {
   user-select: none;
-  width: 60%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  /*align-self: center;*/
   border-spacing: 0px;
   border: 0px;
+  border-collapse: separate;
 }
-
-tr.magyar_szavak {
-
-}
-
-td.magyar_szavak {
+td.fejlec {
   padding-top: 6pt;
-  border: 1px white solid;
-  border-start-end-radius: 5px;
+  border: 2px darkslateblue solid;
+  border-right: 0px;
+  border-bottom: 0px;
   width: 25%;
   text-align: center;
 }
-
+td.fejlec:first-child {
+  border-top-left-radius: 4pt;
+}
+td.fejlec:last-child {
+  border-top-right-radius: 4pt;
+  border-right: 2px darkslateblue solid;
+}
 /* end of header */
+
+/* content */
+main.tartalom {
+  grid-area: tartalom;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 3pt;
+  padding-top: 8pt;
+  background-color: slateblue;
+}
+/* end of content */
+
+/* footer */
+footer.lablec {
+  padding: 6pt;
+  grid-area: lablec;
+  background-color: #241f47;
+}
+p.lablec {
+  margin-block: 0px;
+}
+/* end of footer */
