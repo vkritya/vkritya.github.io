@@ -15,6 +15,7 @@
   }
 }
 
+/* #region general - tag */
 body {
   display: grid;
   grid-template-areas: "fejlec" "tartalom" "lablec";
@@ -47,6 +48,7 @@ ul {
   line-height: 1.2em;
   margin-block: 0;
 }
+
 a {
   color: lightblue;
   background-color: rgba(0, 0, 0, 0.15);
@@ -62,19 +64,20 @@ a:hover {
 a:active {
   color: orange;
 }
+/* #endregion */
 
-/* general */
+/* #region general - class */
 .arnyek {
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
 }
-/* end of general */
+/* #endregion */
 
-/* header */
-.fejlec {
+/* #region header */
+header, header * {
   margin-block: 0;
 }
-header.fejlec {
+header {
   grid-area: fejlec;
   position: sticky;
   top: 0;
@@ -82,7 +85,7 @@ header.fejlec {
   background-color: white;
   color: slateblue;
 }
-table.fejlec {
+header table {
   user-select: none;
   width: 90%;
   margin: 0 auto;
@@ -90,7 +93,7 @@ table.fejlec {
   border: 0px;
   border-collapse: separate;
 }
-td.fejlec {
+header td {
   padding-top: 6pt;
   border: 2px darkslateblue solid;
   border-right: 0px;
@@ -98,14 +101,14 @@ td.fejlec {
   width: 25%;
   text-align: center;
 }
-td.fejlec:first-child {
+header td:first-child {
   border-top-left-radius: 4pt;
 }
-td.fejlec:last-child {
+header td:last-child {
   border-top-right-radius: 4pt;
   border-right: 2px darkslateblue solid;
 }
-td.fejlec:hover {
+header td:hover {
   -webkit-animation-direction: normal;
   -webkit-animation-timing-function: ease-in;
   -webkit-animation-fill-mode: forwards;
@@ -119,10 +122,11 @@ td.fejlec:hover {
   animation-name: mousehover;
   animation-duration: 250ms;
 }
-/* end of header */
+/* #endregion */
 
-/* content */
-main.tartalom {
+/* #region content */
+/* base */
+main {
   grid-area: tartalom;
   width: 90%;
   margin: 0 auto;
@@ -134,15 +138,31 @@ main.tartalom {
   padding-top: 11pt;
   background-color: slateblue;
 }
-/* end of content */
+/* #region kepek */
+.kepek {
+  display: flex;
+  flex-wrap: wrap;
+}
+.kepek div {
+  margin: 1rem;
+  height: 10rem;
+  flex-grow: 1;
+}
+.kepek div img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+/* #endregion */
+/* #endregion */
 
-/* footer */
-footer.lablec {
+/* #region footer */
+footer {
   padding: 6pt;
   grid-area: lablec;
   background-color: #241f47;
 }
-p.lablec {
+footer p {
   margin-block: 0px;
 }
-/* end of footer */
+/* #endregion */
