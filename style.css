@@ -34,7 +34,7 @@ p {
   text-indent: 6pt;
   line-height: 1.3em;
   padding: 6pt 6pt 0pt 6pt;
-  margin-block: 0;
+  margin: 0 0;
 }
 h1 {
   padding-top: 6pt;
