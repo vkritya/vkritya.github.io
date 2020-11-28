@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <script src="injectCommonElements.js"></script>
+  <script src="inject.js"></script>
 </head>
 <body>
   <!-- header (JS import) -->
@@ -16,6 +16,7 @@
   <main class="arnyek">
     <h1>Content</h1>
     <p>content</p>
+    <h2>cuccli</h2>
   </main>
 
   <!-- footer (JS import) -->
@@ -23,6 +24,6 @@
 
   <!-- import after HTML parse -->
   <script>
-    inject();
+    injectCommon(0);
   </script>
 </body>
