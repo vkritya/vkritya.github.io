@@ -2,8 +2,8 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>Portfólió oldal</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Veres Kristóf - Portfólió</title>
+  <link rel="icon" type="image/png" href="img/favicon.png" />
 
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script src="inject.js"></script>
@@ -14,11 +14,63 @@
 
   <!-- content -->
   <main class="arnyek">
-    <div class="kepek">
-      <div>
-        <img src="" alt="Hiba a kép betöltése közben">
-      </div>
-    </div>
+    <h1>Programozás</h1>
+    <p>
+      A számítástechnika mindig is érdekelt. Igaz, régen elsősorban a Flash játékok miatt, azonban ötödik osztályban informatika órán elkezdtünk a
+      szokásos alkalmazások (Word, PowerPoint, Excel, Paint stb.) megismerésén túl programozni is, Imagine Logoban. A Logo nem éppen fejlett nyelv, de
+      a vizuális jellegének köszönhetően az alapokat (ciklusok, ifek, függvények, változók, rekurzió, stb.) ötödikesként is könnyen meg lehet érteni
+      és tanulni.
+    </p>
+    <p>
+      Ha emlékezetem nem csal X évig volt kötelező a Logo (tovább csak szakkörön lehetett tanulni), utána váltottunk egy valamivel komolyabb (bár nem
+      igazán kedvelt) nyelvre, a Visual Basicre.
+    </p>
+    <h2>Visual Basic</h2>
+    <p>
+      Órán megismerkedtünk a WinForms-al, az objektum orientált programozás alapjait <i>valamennyire</i> megtanultuk, de órai keretek között nem
+      igazán lehetett elmélyedni benne. Szakkörön pedig versenyfelkészítés volt az elsődleges cél, úgyhogy ott konzolalkalmazásokat írtunk. A
+      középiskolai tananyagban összesen ennyi volt, de az internetnek és elsősorban a <a href="https://stackoverflow.com">stackoverflow</a>-nak,
+      valamint a VB-hez az <a href="https://docs.microsoft.com">MSDN</a>-nek köszönhetően manapság nem nehéz további tudásra szert tenni, ha megvan a
+      megfelelő alap és motiváció.
+    </p>
+    <p>
+      Nekem 12. osztály végén, amikor a koronavírus miatt (először) bezártak az iskolák megvolt a kellő motivációm, hogy írjak egy e-Kréta klienst,
+      amit igaz, félbehagytam, de az érdeklődők számára
+      <a href="https://github.com/vkritya/HomeworkScraper-alpha">jelenleg is elérhető a githubomon</a>.
+    </p>
+    <p>Erről pár kép:</p>
+    <div class="kepek"></div>
+
+    <h2>Android (Java)</h2>
+    <p>
+      Hogy ne csak a VB-nél maradjak, nekiálltam Android programozást is tanulni, kisebb nagyobb sikerekkel. Első komolyabb alkalmazásom egy
+      társasjátékhoz volt segédalkalmazás, mely egész jól sikerült és különösebb gondok nélkül működött is.
+    </p>
+    <p>
+      Második komolyabb alkalmazásom a volt középiskolámban évente megrendezésre kerülő Zrínyi-túrára készült, melyet 11-edikben az osztályom
+      szervezett meg. A szokásos papíron kiadott térkép mellé elkészítettem egy alkalmazást, ami GPS, mágneses iránytű és a gyorsulás szenzor
+      segítségével végigkalauzolta a diákokat a kijelölt útvonalon, és közben extra információkat is közölt a használóval, mint például mennyi van még
+      vissza a teljes útból, milyen messze van a következő állomás és milyen messze van a következő követendő pont. Viszont mindezt eléggé
+      alapszintűen írtam meg, mivel nem ismertem annyira se a Java-t, se az Androidra való programozási szokásokat.
+    </p>
+    <p>Erről is pár kép:</p>
+    <div class="kepek"></div>
+
+    <p>
+      És a jelenlegi legjobban megcsinált alkalmazásom egy távirányító a
+      <a href="https://vb-audio.com/Voicemeeter/banana.htm">Voicemeeter</a> nevezetű számítógépes hangkeverő alkalmazáshoz, amivel interneten
+      keresztül tudom irányítani a keverőpultot. Filmnézés közben, esetleg játék közben ideális, mert nem kell megszakítani a filmet, illetve ki alt +
+      tabolni a játékból a hangerő szabályozásához. Ezen felül a Voicemeeterbe van beépített internetes hangtovábbítás, amit én is implementáltam a
+      telefonos alkalmazásban, így akár mikrofonként is használható a telefon.
+    </p>
+    <p>A számítógépen a fogadóoldal C++-ban íródott, eredetileg a bátyám által, de azóta csiszoltam azon is egy kicsit.</p>
+    <div class="kepek"></div>
+
+    <h2>Egyéb nyelvek</h2>
+    <p>
+      Természetesen nem csak ezt a pár nyelvet használtam eddigi pálafutásom során, írtam JavaScriptet (például ez az oldal is használ), sima C-t
+      (Arduinora), és sajnos a Shell Scriptekkel is találkoztam már.
+    </p>
   </main>
 
   <!-- footer (JS import) -->
@@ -26,7 +78,9 @@
 
   <!-- import after HTML parse -->
   <script>
-    injectCommon(2);
-    injectImages(0, ["", ""]);
+    injectCommon(1);
+    injectImages(0, ["VB0.png", "VB1.png"]);
+    injectImages(1, ["Android00.jpg", "Android01.gif", "Android02.jpg"], 30);
+    injectImages(2, ["Android10.jpg", "Android11.jpg", "Android12.gif", "Android13.jpg"], 30);
   </script>
 </body>

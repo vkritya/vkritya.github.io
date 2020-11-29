@@ -1,7 +1,8 @@
 /* "GNU GPL licence version 3 with font exception" => beágyazható a GNU licenc hozzácsatolása nélkül */
 @font-face {
+  font-display: swap;
   font-family: "osifont";
-  src: "osifont.woff";
+  src: url("osifont.woff") format('woff');
 }
 
 @keyframes mousehover {
@@ -20,6 +21,7 @@
   margin: 0;
 }
 body {
+  font-kerning: none;
   display: grid;
   grid-template-areas: "fejlec" "tartalom" "lablec";
   grid-template-rows: max-content 1fr max-content;
@@ -40,6 +42,9 @@ h1 {
   padding-top: 6pt;
   padding-left: 3pt;
   padding-bottom: 0;
+}
+h2 {
+  padding-top: 12pt;
 }
 ul {
   margin-left: 3pt;
@@ -64,7 +69,7 @@ a:active {
 /* #endregion */
 
 /* #region general - class */
-.arnyek {
+.arnyek, .kepek div img:hover {
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
 }
@@ -72,14 +77,15 @@ a:active {
 
 /* #region header */
 header {
+  font-size: 20pt;
   grid-area: fejlec;
   position: sticky;
-  top: 0;
   width: 100%;
   background-color: white;
   color: slateblue;
 }
 header table {
+  font-size: 16pt;
   user-select: none;
   width: 90%;
   margin: 0 auto;
@@ -116,7 +122,7 @@ header td:hover {
   animation-name: mousehover;
   animation-duration: 250ms;
 }
-header td.active {
+header td.aktiv {
   animation: unset;
   background-color: darkslateblue;
   color: white;
@@ -140,15 +146,18 @@ main {
 }
 /* #region kepek */
 .kepek {
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
 }
 .kepek div {
   margin: 0.5rem;
-  height: 10rem;
+  height: 15rem;
   flex-grow: 1;
 }
 .kepek div img {
+  display: block;
+  margin: 0 auto;
   height: 100%;
   object-fit: contain;
 }
@@ -157,6 +166,7 @@ main {
 
 /* #region footer */
 footer {
+  font-size: 14pt;
   padding: 6pt;
   grid-area: lablec;
   background-color: #241f47;
